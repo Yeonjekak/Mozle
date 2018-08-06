@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="clubMapper">
+
+<select id="selectClubList" resultType="com.kh.mozle.club.model.vo.ClubMain" parameterType="com.kh.mozle.club.model.vo.ClubMain">
+ SELECT C_NO,C_NAME,C_CATEGORY,C_LEADER_ID,C_MEMBER_ID,C_PICTURE,C_CONTENT,C_SUMMARY,C_THUMBNAIL
+  FROM CLUB_MAIN
+  WHERE C_CATEGORY=#{c_category}
+
+</select>
+  
+
+  
+</mapper>
